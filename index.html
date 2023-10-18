@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Calorias & Guia de Treino</title>
+
+    <!-- CSS Mobile First -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Javascript -->
+    <script defer src="data/alimentos.js"></script>
+    <script defer src="js/script.js"></script>
+
+    <!-- Link BoxIcons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">Work<span>Out</span></a>
+        <div class="bx bx-menu" id="menu-icon"></div>
+
+        <ul class="navbar">
+            <!--<li><a href="#home">Home</a></li>-->
+            <li><a href="#home">Calculadora</a></li>
+            <li><a href="#treino">Guia Treino</a></li>
+        </ul>
+    </header>
+    <main>
+
+        <button id="btn-voltar-ao-topo" href="#" class='bx bxs-chevrons-up'></button>
+        <button id="btn-topo" href="#" class='bx bxs-chevrons-up'></button>
+
+        <section id="home" class="home">
+            <h1><span>Calc</span>uladora de <span>Calorias</span></h1>
+        </section>
+
+        <section id="calculadora" class="calculadora">
+            <div class="container">
+                <label for="inpalimentos">Alimento: </label>
+                <input onClick="this.select();" type="text" id="inpalimentos" name="inpalimentos" list="list-alimentos" placeholder="Selecione um alimento"/>
+                <datalist id="list-alimentos">
+                    <!-- Lista inserida via JS -->
+                </datalist>
+                <button class='bx bx-plus-medical' id="btnadd" type="submit"></button>
+            </div>
+
+            <div id="table-container">
+                <table>
+                    <tr>
+                      <th>Alimento</th>
+                      <th>Porção</th>
+                      <th>Calorias</th>
+                      <th>Del</th>
+                    </tr>
+                    <tr>
+                      <td>-</td>
+                      <td>-</td>
+                      <td>-</td>
+                      <td><button id="btn-remover" class='bx bxs-trash'></button></td>
+                    </tr>
+                  </table>
+            </div>
+
+              <div class="div-total">
+                  <label>Total de Calorias: </label>
+                  <label id="total">0</label>
+              </div>
+
+              <button id="btn-limpar">Limpar Tabela</button>
+        </section>
+
+        <section id="treino" class="treino">
+            <h1><span>Guia</span> de <span>Treino</span></h1>
+            <h5>Clique em um botão para escolher um treino</h5>
+
+            <div class="menu-treino">
+                <button class="btn-treino" id="btn-peito">Peito</button>
+                <button class="btn-treino" id="btn-biceps">Bíceps</button>
+                <button class="btn-treino" id="btn-costas">Costas</button>
+                <button class="btn-treino" id="btn-triceps">Tríceps</button>
+                <button class="btn-treino" id="btn-ombro">Ombro</button>
+                <button class="btn-treino" id="btn-trapezio">Trapézio</button>
+                <button class="btn-treino" id="btn-perna">Perna</button>
+                <button class="btn-treino" id="btn-abdomen">Abdomen</button>
+            </div>
+
+            <div class="legenda-container">
+                <h4 class="legenda-titulo">Legenda de músculos trabalhados</h4>
+                <div class="legenda">
+                    <div class="legenda-item">
+                        <div id="principal" class="box"></div>
+                        <span>Principal</span>
+                    </div>
+                    <div class="legenda-item">
+                        <div id="secundario" class="box"></div>
+                        <span>Secundário</span>
+                    </div>
+                    <div class="legenda-item">
+                        <div id="acessorio" class="box"></div>
+                        <span>Acessório</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PEITO -->
+            <div id="peito" class="musculo">
+                <!--<h2>Treino de Peito</h2>-->
+                <div class="musculo-exercicio">
+                    <h3>Supino reto com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_halter_01.png" alt="Peito Reto com Halter">
+                    </div>
+                    <!--<div class="instrucoes">
+                        <span><strong>Repetições:</strong> 5 séries de 10 / 4 séries de 12</span>
+                        <span><strong>Peso Iniciante:</strong> 6 KG cada lado</span>
+                        <span><strong>Peso Intermediário:</strong> 10 KG cada lado</span>
+                        <span><strong>Peso Experiente:</strong> 25 KG cada lado</span>
+                        <span><strong>Peso Monstro:</strong> 50 KG cada lado</span>
+                    </div>-->
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo declinado com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_halter_02.png" alt="Peito Reto com Halter">
+                    </div>
+                    
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo inclinado com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_halter_03.png" alt="Peito Reto com Halter">
+                    </div>
+                    
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo reto com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_halter_04.png" alt="Peito Reto com Halter">
+                    </div>
+                    
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Pullover com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_halter_05.png" alt="Peito Reto com Halter">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Supino reto com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_06.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Supino declinado com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_07.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Supino inclinado com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_08.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo declinado na polia</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_09.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Supino reto fechado</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_10.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Supino vertical na máquina</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_11.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo com polia baixa</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_12.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo com polia alta</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_13.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Voador peitoral</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_14.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo na máquina</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_15.png" alt="">
+                    </div>
+                </div>
+                
+
+            </div>
+
+            <!-- BICEPS -->
+            <div id="biceps" class="musculo">                
+                <div class="musculo-exercicio">
+                    <h3>Rosca unilateral banco Scott com halter</h3>
+                    <div class="img-container">
+                        <img src="img/treino/biceps/biceps_01.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Rosca bíceps direta com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/biceps/biceps_02.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Rosca concentrada unilateral com halter</h3>
+                    <div class="img-container">
+                        <img src="img/treino/biceps/biceps_03.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Rosca apoiado no banco Scott com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/biceps/biceps_04.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Rosca direta com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/biceps/biceps_05.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Rosca com halteres no banco inclinado</h3>
+                    <div class="img-container">
+                        <img src="img/treino/biceps/biceps_06.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- COSTAS -->
+            <div id="costas" class="musculo">
+                
+                <div class="musculo-exercicio">
+                    <h3>Puxador Frontal</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_01.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Pullover polia</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_02.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Pulley articulado</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_03.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Puxador  triângulo</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_05.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Remada unilateral</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_06.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Levantamento terra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_07.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Puxador frontal em pé</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_08.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Puxador pegada supinada Fechada</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_09.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Remada curvada com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_10.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Remada curvada pegada supinada</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_11.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Remada curvada pegada pronada</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_12.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TRICEPS -->
+            <div id="triceps" class="musculo">
+                
+                <div class="musculo-exercicio">
+                    <h3>Tríceps francês unilateral deitado</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_01.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Extensão com barra reta</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_02.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Extensão com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_03.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Extensão de halteres sob a cabeça</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_04.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Tríceps francês unilateral sentado</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_05.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Extensão de tríceps no cabo sob a cabeça</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_06.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Tríceps na polia com corda</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_07.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Tríceps unilateral na polia alta</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_08.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Mergulho nas paralelas</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_09.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Tríceps coice</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_10.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Tríceps coice unilateral</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_11.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Tríceps apoiado no banco</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_12.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- OMBRO -->
+            <div id="ombro" class="musculo">
+                
+                <div class="musculo-exercicio">
+                    <h3>Desenvolvimento de ombros com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_01.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Elevação frontal</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_02.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Elevação unilateral no cross</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_03.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Desenvolvimento de ombros com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_04.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Elevação de ombros banco inclinado</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_05.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Elevação frontal alternada</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_06.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo invertido com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_07.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Elevação unilateral no banco inclinado</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_08.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Elevação lateral</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_09.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Remada pegada aberta na máquina</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_10.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Elevação frontal na polia</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_11.png" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- TRAPEZIO -->
+            <div id="trapezio" class="musculo">
+                
+                <div class="musculo-exercicio">
+                    <h3>Encolhimento de ombros com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/trapezio/trapezio_01.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Remada alta com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/trapezio/trapezio_02.jfif" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Encolhimento de ombro com a barra atrás do corpo</h3>
+                    <div class="img-container">
+                        <img src="img/treino/trapezio/trapezio_04.jfif" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- PERNA -->
+            <div id="perna" class="musculo">
+                
+                <div class="musculo-exercicio">
+                    <h3>Agachamento búlgaro com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_01.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Agachamento com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_02.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Agachamento</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_03.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Agachamento no rack</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_04.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Flexora deitada</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_05.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Cadeira extensora</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_06.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Flexão de joelho unilateral máquina</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_07.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Cadeira flexora</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_08.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Panturrilha sentado horizontal</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_09.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Leg press</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_10.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Agachamento afundo com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_11.png" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Agachamento com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_12.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ABDOMEN -->
+            <div id="abdomen" class="musculo">
+                
+                <div class="musculo-exercicio">
+                    <h3>Flexão lateral de tronco</h3>
+                    <div class="img-container">
+                        <img src="img/treino/abdomen/abdomen_01.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Flexão lateral de tronco com banco</h3>
+                    <div class="img-container">
+                        <img src="img/treino/abdomen/abdomen_02.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Abdominal infra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/abdomen/abdomen_03.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Abdominal reto com peso</h3>
+                    <div class="img-container">
+                        <img src="img/treino/abdomen/abdomen_04.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="musculo-exercicio">
+                    <h3>Abdominal reto (ou abdominal supra)</h3>
+                    <div class="img-container">
+                        <img src="img/treino/abdomen/abdomen_05.jpg" alt="">
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
