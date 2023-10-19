@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,6 +18,7 @@
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
 </head>
+
 <body>
     <header>
         <a href="#" class="logo">Work<span>Out</span></a>
@@ -33,6 +35,11 @@
         <button id="btn-voltar-ao-topo" href="#" class='bx bxs-chevrons-up'></button>
         <button id="btn-topo" href="#" class='bx bxs-chevrons-up'></button>
 
+        <div>
+            <h1>dieta</h1>
+            <img src="./img/WhatsApp Image 2023-10-19 at 10.51.44.jpeg" width="100%" height="100%" alt="dieta">
+        </div>
+
         <section id="home" class="home">
             <h1><span>Calc</span>uladora de <span>Calorias</span></h1>
         </section>
@@ -40,7 +47,8 @@
         <section id="calculadora" class="calculadora">
             <div class="container">
                 <label for="inpalimentos">Alimento: </label>
-                <input onClick="this.select();" type="text" id="inpalimentos" name="inpalimentos" list="list-alimentos" placeholder="Selecione um alimento"/>
+                <input onClick="this.select();" type="text" id="inpalimentos" name="inpalimentos" list="list-alimentos"
+                    placeholder="Selecione um alimento" />
                 <datalist id="list-alimentos">
                     <!-- Lista inserida via JS -->
                 </datalist>
@@ -50,26 +58,26 @@
             <div id="table-container">
                 <table>
                     <tr>
-                      <th>Alimento</th>
-                      <th>Porção</th>
-                      <th>Calorias</th>
-                      <th>Del</th>
+                        <th>Alimento</th>
+                        <th>Porção</th>
+                        <th>Calorias</th>
+                        <th>Del</th>
                     </tr>
                     <tr>
-                      <td>-</td>
-                      <td>-</td>
-                      <td>-</td>
-                      <td><button id="btn-remover" class='bx bxs-trash'></button></td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><button id="btn-remover" class='bx bxs-trash'></button></td>
                     </tr>
-                  </table>
+                </table>
             </div>
 
-              <div class="div-total">
-                  <label>Total de Calorias: </label>
-                  <label id="total">0</label>
-              </div>
+            <div class="div-total">
+                <label>Total de Calorias: </label>
+                <label id="total">0</label>
+            </div>
 
-              <button id="btn-limpar">Limpar Tabela</button>
+            <button id="btn-limpar">Limpar Tabela</button>
         </section>
 
         <section id="treino" class="treino">
@@ -127,7 +135,7 @@
                     <div class="img-container">
                         <img src="img/treino/peito/peito_halter_02.png" alt="Peito Reto com Halter">
                     </div>
-                    
+
                 </div>
 
                 <div class="musculo-exercicio">
@@ -135,7 +143,7 @@
                     <div class="img-container">
                         <img src="img/treino/peito/peito_halter_03.png" alt="Peito Reto com Halter">
                     </div>
-                    
+
                 </div>
 
                 <div class="musculo-exercicio">
@@ -143,7 +151,7 @@
                     <div class="img-container">
                         <img src="img/treino/peito/peito_halter_04.png" alt="Peito Reto com Halter">
                     </div>
-                    
+
                 </div>
 
                 <div class="musculo-exercicio">
@@ -222,12 +230,12 @@
                         <img src="img/treino/peito/peito_15.png" alt="">
                     </div>
                 </div>
-                
+
 
             </div>
 
             <!-- BICEPS -->
-            <div id="biceps" class="musculo">                
+            <div id="biceps" class="musculo">
                 <div class="musculo-exercicio">
                     <h3>Rosca unilateral banco Scott com halter</h3>
                     <div class="img-container">
@@ -274,7 +282,7 @@
 
             <!-- COSTAS -->
             <div id="costas" class="musculo">
-                
+
                 <div class="musculo-exercicio">
                     <h3>Puxador Frontal</h3>
                     <div class="img-container">
@@ -297,7 +305,7 @@
                 </div>
 
                 <div class="musculo-exercicio">
-                    <h3>Puxador  triângulo</h3>
+                    <h3>Puxador triângulo</h3>
                     <div class="img-container">
                         <img src="img/treino/costas/costas_05.jpg" alt="">
                     </div>
@@ -356,7 +364,7 @@
 
             <!-- TRICEPS -->
             <div id="triceps" class="musculo">
-                
+
                 <div class="musculo-exercicio">
                     <h3>Tríceps francês unilateral deitado</h3>
                     <div class="img-container">
@@ -445,7 +453,7 @@
 
             <!-- OMBRO -->
             <div id="ombro" class="musculo">
-                
+
                 <div class="musculo-exercicio">
                     <h3>Desenvolvimento de ombros com barra</h3>
                     <div class="img-container">
@@ -527,7 +535,7 @@
 
             <!-- TRAPEZIO -->
             <div id="trapezio" class="musculo">
-                
+
                 <div class="musculo-exercicio">
                     <h3>Encolhimento de ombros com halteres</h3>
                     <div class="img-container">
@@ -553,7 +561,7 @@
 
             <!-- PERNA -->
             <div id="perna" class="musculo">
-                
+
                 <div class="musculo-exercicio">
                     <h3>Agachamento búlgaro com halteres</h3>
                     <div class="img-container">
@@ -642,7 +650,7 @@
 
             <!-- ABDOMEN -->
             <div id="abdomen" class="musculo">
-                
+
                 <div class="musculo-exercicio">
                     <h3>Flexão lateral de tronco</h3>
                     <div class="img-container">
@@ -683,4 +691,5 @@
         </section>
     </main>
 </body>
+
 </html>
