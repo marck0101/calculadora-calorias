@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -63,7 +64,8 @@
             id="inpalimentos"
             name="inpalimentos"
             list="list-alimentos"
-            placeholder="Selecione um alimento"
+                   
+            placeholder="Selecione um alimento" 
           />
           <datalist id="list-alimentos">
             <!-- Lista inserida via JS -->
@@ -87,14 +89,36 @@
             </tr>
           </table>
         </div>
+            <div id="table-container">
+                <table>
+                    <tr>
+                        <th>Alimento</th>
+                        <th>Porção</th>
+                        <th>Calorias</th>
+                        <th>Del</th>
+                    </tr>
+                    <tr>
+                        <td>-</td>
+                        <td>-</td>
+                        <td>-</td>
+                        <td><button id="btn-remover" class='bx bxs-trash'></button></td>
+                    </tr>
+                </table>
+            </div>
 
         <div class="div-total">
           <label>Total de Calorias: </label>
           <label id="total">0</label>
         </div>
+            <div class="div-total">
+                <label>Total de Calorias: </label>
+                <label id="total">0</label>
+            </div>
 
         <button id="btn-limpar">Limpar Tabela</button>
       </section>
+            <button id="btn-limpar">Limpar Tabela</button>
+        </section>
 
       <section id="treino" class="treino">
         <h1><span>Guia</span> de <span>Treino</span></h1>
@@ -158,6 +182,13 @@
               />
             </div>
           </div>
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo declinado com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_halter_02.png" alt="Peito Reto com Halter">
+                    </div>
+
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Crucifixo inclinado com halteres</h3>
@@ -168,6 +199,13 @@
               />
             </div>
           </div>
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo inclinado com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_halter_03.png" alt="Peito Reto com Halter">
+                    </div>
+
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Crucifixo reto com halteres</h3>
@@ -178,6 +216,13 @@
               />
             </div>
           </div>
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo reto com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_halter_04.png" alt="Peito Reto com Halter">
+                    </div>
+
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Pullover com halteres</h3>
@@ -259,6 +304,15 @@
             </div>
           </div>
         </div>
+                <div class="musculo-exercicio">
+                    <h3>Crucifixo na máquina</h3>
+                    <div class="img-container">
+                        <img src="img/treino/peito/peito_15.png" alt="">
+                    </div>
+                </div>
+
+
+            </div>
 
         <!-- BICEPS -->
         <div id="biceps" class="musculo">
@@ -268,6 +322,14 @@
               <img src="img/treino/biceps/biceps_01.jpg" alt="" />
             </div>
           </div>
+            <!-- BICEPS -->
+            <div id="biceps" class="musculo">
+                <div class="musculo-exercicio">
+                    <h3>Rosca unilateral banco Scott com halter</h3>
+                    <div class="img-container">
+                        <img src="img/treino/biceps/biceps_01.jpg" alt="">
+                    </div>
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Rosca bíceps direta com barra</h3>
@@ -313,6 +375,15 @@
               <img src="img/treino/costas/costas_01.jpg" alt="" />
             </div>
           </div>
+            <!-- COSTAS -->
+            <div id="costas" class="musculo">
+
+                <div class="musculo-exercicio">
+                    <h3>Puxador Frontal</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_01.jpg" alt="">
+                    </div>
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Pullover polia</h3>
@@ -334,6 +405,12 @@
               <img src="img/treino/costas/costas_05.jpg" alt="" />
             </div>
           </div>
+                <div class="musculo-exercicio">
+                    <h3>Puxador triângulo</h3>
+                    <div class="img-container">
+                        <img src="img/treino/costas/costas_05.jpg" alt="">
+                    </div>
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Remada unilateral</h3>
@@ -393,6 +470,15 @@
               <img src="img/treino/triceps/triceps_01.jpg" alt="" />
             </div>
           </div>
+            <!-- TRICEPS -->
+            <div id="triceps" class="musculo">
+
+                <div class="musculo-exercicio">
+                    <h3>Tríceps francês unilateral deitado</h3>
+                    <div class="img-container">
+                        <img src="img/treino/triceps/triceps_01.jpg" alt="">
+                    </div>
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Extensão com barra reta</h3>
@@ -480,6 +566,15 @@
               <img src="img/treino/ombro/ombro_01.png" alt="" />
             </div>
           </div>
+            <!-- OMBRO -->
+            <div id="ombro" class="musculo">
+
+                <div class="musculo-exercicio">
+                    <h3>Desenvolvimento de ombros com barra</h3>
+                    <div class="img-container">
+                        <img src="img/treino/ombro/ombro_01.png" alt="">
+                    </div>
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Elevação frontal</h3>
@@ -560,6 +655,15 @@
               <img src="img/treino/trapezio/trapezio_01.png" alt="" />
             </div>
           </div>
+            <!-- TRAPEZIO -->
+            <div id="trapezio" class="musculo">
+
+                <div class="musculo-exercicio">
+                    <h3>Encolhimento de ombros com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/trapezio/trapezio_01.png" alt="">
+                    </div>
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Remada alta com barra</h3>
@@ -584,6 +688,15 @@
               <img src="img/treino/perna/perna_01.jpg" alt="" />
             </div>
           </div>
+            <!-- PERNA -->
+            <div id="perna" class="musculo">
+
+                <div class="musculo-exercicio">
+                    <h3>Agachamento búlgaro com halteres</h3>
+                    <div class="img-container">
+                        <img src="img/treino/perna/perna_01.jpg" alt="">
+                    </div>
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Agachamento com barra</h3>
@@ -671,6 +784,15 @@
               <img src="img/treino/abdomen/abdomen_01.jpg" alt="" />
             </div>
           </div>
+            <!-- ABDOMEN -->
+            <div id="abdomen" class="musculo">
+
+                <div class="musculo-exercicio">
+                    <h3>Flexão lateral de tronco</h3>
+                    <div class="img-container">
+                        <img src="img/treino/abdomen/abdomen_01.jpg" alt="">
+                    </div>
+                </div>
 
           <div class="musculo-exercicio">
             <h3>Flexão lateral de tronco com banco</h3>
@@ -730,4 +852,6 @@
       </section>
     </main>
   </body>
+</body>
+
 </html>
